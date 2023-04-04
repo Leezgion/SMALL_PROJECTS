@@ -1,0 +1,19 @@
+@import url(../../App.css);
+.hoverButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 0px 7px -1px;
+  transform: scale(100%);
+  transition: transform 1s;
+}
+.hoverButton:hover {
+  transform: scale(110%);
+  transition: transform 1s;
+}
+.hoverButton-icon {
+  width: 100%;
+  height: 100%;
+  fill: var(--main-bg-color);
+}

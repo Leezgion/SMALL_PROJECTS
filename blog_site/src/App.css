@@ -1,0 +1,341 @@
+/* .App {
+  text-align: center;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: Apple Chancery, cursive;
+  font-family: Brush Script MT, Brush Script Std, cursive; */
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #6a1cd0;
+  --main-nav-height: 100px;
+  --main-footer-height: 200px;
+  --main-content-height: calc(
+    100vh - var(--main-nav-height) - var(--main-footer-height)
+  );
+  --main-post-bg-color: #a8a8a8;
+}
+.main-document-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: var(--main-nav-height);
+  z-index: 9999;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: var(--main-nav-height);
+  background-color: var(--main-bg-color);
+  color: #ffffff;
+}
+.navbar--Link a:hover {
+  opacity: 0.7;
+}
+.inActive {
+  color: #ffffff;
+  line-height: 100px;
+  margin: 10px;
+  text-decoration: none;
+  /* border-bottom: 3px solid #fff; */
+  font-size: 1rem;
+  -moz-transition: font-size 1s;
+  -webkit-transition: font-size 1s;
+  -o-transition: font-size 1s;
+  transition: font-size 1s;
+}
+
+.isActive {
+  color: #ffffff;
+  line-height: 100px;
+  margin: 10px;
+  text-decoration: none;
+  border-bottom: 3px solid #fff;
+  font-size: 1.2rem;
+  -moz-transition: font-size 1s;
+  -webkit-transition: font-size 1s;
+  -o-transition: font-size 1s;
+  transition: font-size 1s;
+}
+
+.logIn-Button {
+  width: 100px;
+  line-height: 100%;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 2px 0px 2px 2px #000;
+  cursor: pointer;
+}
+
+.logIn-Button:hover {
+  box-shadow: 1px 1px 1px 1px #f2eff4;
+}
+
+.navbar--userData {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  margin-right: 20px;
+}
+
+.navbar--userData img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.navbar--userData button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 1rem;
+  background-color: #39006d;
+  color: #fff;
+}
+
+.navbar--userData button:hover {
+  background-color: #000000;
+}
+.Form-page {
+  min-height: var(--main-content-height);
+}
+
+.form {
+  background-color: var(--main-bg-color);
+  width: 400px;
+  padding: 30px 20px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  transform: scale(1);
+  transition: transform 1s;
+}
+
+.form:hover {
+  transform: scale(1.1);
+  transition: transform 1s;
+}
+
+.form label {
+  font-size: 10px;
+  color: #e81f1f;
+}
+
+.form input,
+.form textarea,
+.form label {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  border-radius: 0.5rem;
+  margin: 2px auto 20px;
+  text-align: center;
+  resize: none;
+}
+
+.form textarea {
+  height: 100px;
+  padding: 10px 10px;
+}
+
+.form input[type="submit"] {
+  cursor: pointer;
+  height: 2.5rem;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 1px 2px 1px 2px #000000;
+}
+
+.form input[type="submit"]:hover {
+  box-shadow: 0px 0px 0px 0px;
+}
+
+.main-page {
+  display: grid;
+  position: relative;
+  grid-template-areas: "aside main main";
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  width: 100%;
+  background-color: var(--main-post-bg-color);
+  min-height: 100vh;
+}
+.main-aside {
+  grid-area: aside;
+  min-height: calc(100vh - var(--main-nav-height));
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--main-nav-height);
+  padding: 10px 10px;
+  background-color: #fff;
+  box-shadow: 0px -4px 10px 2px #000;
+  z-index: 0;
+  overflow: hidden;
+}
+.main-post {
+  position: relative;
+}
+.left-hoverButton {
+  position: absolute;
+  top: var(--main-content-height);
+  left: calc(100% / 4);
+}
+.right-hoverButton {
+  position: absolute;
+  top: var(--main-content-height);
+  right: calc(100% / 4);
+}
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  border-radius: 2rem;
+  background-color: #fff;
+  margin: 20px auto;
+  transform: scale(1);
+  transition: transform 1s;
+}
+
+.post:hover {
+  transform: scale(1.1);
+  transition: transform 1s;
+  box-shadow: 0px 0px 10px 5px #555555;
+}
+
+.post-user {
+  display: flex;
+  position: relative;
+  padding: 12px 16px 0 16px;
+}
+
+.post-user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-createTime {
+  font-size: 0.1rem;
+}
+
+.post-remove {
+  position: absolute;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.post-remove:hover {
+  background-color: #d6d6d6;
+}
+
+.post-message-title {
+  margin: 10px 0;
+  text-align: center;
+  font-weight: 800;
+}
+
+.post-message-text {
+  margin: 10px 0;
+  text-indent: 2rem;
+  padding: 0 10px;
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 50px;
+  padding: 0 30px;
+}
+
+.post-likes {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.post-liked {
+  background-color: var(--main-bg-color);
+  border-radius: 10px;
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.post-liked:hover,
+.post-likes:hover {
+  border: 1px solid #888;
+}
+
+.mark {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: calc(100%);
+}
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .mark {
+    -webkit-backdrop-filter: blur(10px);
+    -o-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.main-document-footer {
+  /* position: -webkit-sticky;
+  position: sticky;
+  bottom: 0; */
+  padding: 30px 30px;
+  height: var(--main-footer-height);
+  background-color: var(--main-bg-color);
+  z-index: 9999;
+}
+.Link-Web {
+  display: flex;
+  flex-wrap: wrap;
+  height: 60px;
+}
+.Link-Web a:active {
+  color: var(--main-bg-color);
+}
+.Link-Web a:link {
+  color: var(--main-bg-color);
+}
+.Link-Web a:visited {
+  color: var(--main-bg-color);
+}
+.Link-Web a:hover {
+  color: var(--main-bg-color);
+  opacity: 0.7;
+}
+.Author-icon {
+  margin: 0 10px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 20%;
+}

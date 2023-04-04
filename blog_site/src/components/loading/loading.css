@@ -1,0 +1,35 @@
+@import url(../../App.css);
+.loading-svg {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 999;
+}
+.loading {
+  width: 60px;
+  height: 60px;
+  stroke: var(--main-bg-color);
+  stroke-width: 8;
+  stroke-linecap: round;
+  /* stroke-dasharray: 0 14; */
+  fill: none;
+  stroke-dasharray: 63;
+  stroke-opacity: 0.6;
+  transform-origin: center;
+  animation: 3s linear infinite rotate;
+}
+@keyframes rotate {
+  form {
+    transform: rotate(240deg);
+    /* stroke-dasharray: 130; */
+  }
+  50% {
+    transform: rotate(480deg);
+    stroke-dasharray: 130;
+  }
+  to {
+    transform: rotate(720deg);
+    stroke-dasharray: 63;
+  }
+}

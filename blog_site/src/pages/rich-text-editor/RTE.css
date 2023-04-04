@@ -1,0 +1,70 @@
+@import url(../../App.css);
+.main-RTE-page {
+  position: relative;
+  min-height: var(--main-content-height);
+}
+.RTE-container {
+  background-color: #fff;
+  width: 90vmin;
+  padding: 50px 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 10px;
+  box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
+}
+.RTE-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+.RTE-options button {
+  height: 28px;
+  width: 29px;
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
+  border: none;
+  background-color: #fff;
+  outline: none;
+  color: #020929;
+}
+.RTE-options select {
+  padding: 7px;
+  border: 1px solid #020929;
+  border-radius: 3px;
+}
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+input[type="color"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 40px;
+  height: 28px;
+  border: none;
+  cursor: pointer;
+}
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 15px;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #020929;
+}
+input[type="color"]::-moz-color-swatch {
+  border-radius: 15px;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #020929;
+}
+#text-input {
+  margin-top: 10px;
+  padding: 20px;
+  border: 10x solid #ddd;
+  height: 30vh;
+}
+.RTE-options .active {
+  background-color: #3a5599;
+}

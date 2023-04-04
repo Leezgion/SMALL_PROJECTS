@@ -1,0 +1,41 @@
+.popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  width: 350px;
+  height: 200px;
+  border: none;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(300px);
+  -moz-backdrop-filter: blur(300px);
+  -o-backdrop-filter: blur(300px);
+  box-shadow: -2px 2px 1px 1px #b3b3b3;
+  backdrop-filter: blur(300px);
+}
+
+.popup-text {
+  height: 160px;
+  line-height: 160px;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.popup-buttons button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: #fff;
+}
+
+.popup-buttons button:hover {
+  border: 1px solid #000;
+}
