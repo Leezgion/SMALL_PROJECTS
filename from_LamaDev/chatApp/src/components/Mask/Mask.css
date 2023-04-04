@@ -1,0 +1,14 @@
+.mark {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: calc(100%);
+}
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .mark {
+    -webkit-backdrop-filter: blur(10px);
+    -o-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}

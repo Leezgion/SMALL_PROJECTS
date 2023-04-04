@@ -1,0 +1,33 @@
+.loading-svg {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 999;
+}
+.loading {
+  width: 60px;
+  height: 60px;
+  stroke: #a7bcff;
+  stroke-width: 8;
+  stroke-linecap: round;
+  /* stroke-dasharray: 0 14; */
+  fill: none;
+  stroke-dasharray: 63;
+  stroke-opacity: 0.6;
+  transform-origin: center;
+  animation: 3s linear infinite rotate;
+}
+@keyframes rotate {
+  form {
+    transform: rotate(240deg);
+  }
+  50% {
+    transform: rotate(480deg);
+    stroke-dasharray: 130;
+  }
+  to {
+    transform: rotate(720deg);
+    stroke-dasharray: 63;
+  }
+}
